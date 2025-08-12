@@ -202,9 +202,14 @@ async function main() {
       console.log('\nAll orders assigned.');
     }
 
+    await csvWriter.writeRecords(outputRows);
+
   } catch (err) {
     console.error('Error:', err);
   }
+  
 }
 
 main();
+
+module.exports = main;
